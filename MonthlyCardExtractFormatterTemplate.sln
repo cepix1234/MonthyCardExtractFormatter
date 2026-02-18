@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{79BA90B0-07CF-47F7-8335-DCF0940A153A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlyCardExtractFormatter.App", "app\MonthlyCardExtractFormatter.App\MonthlyCardExtractFormatter.App.csproj", "{3A5967C7-213A-4827-A509-A9DA092618BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlyCardExtractFormatter.Core", "app\MonthlyCardExtractFormatter.Core\MonthlyCardExtractFormatter.Core.csproj", "{78EF4B41-BA32-4191-99A0-1075DB62FF23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlyCardExtractFormatter.Infrastructure", "app\MonthlyCardExtractFormatter.Infrastructure\MonthlyCardExtractFormatter.Infrastructure.csproj", "{218DE586-411A-4AA9-86FD-2D3C856F0D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonthlyCardExtractFormatter.Core.test", "app\MonthlyCardExtractFormatter.Core.test\MonthlyCardExtractFormatter.Core.test.csproj", "{DF0F1DBA-2985-481A-B873-74868F1E5A0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A5967C7-213A-4827-A509-A9DA092618BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5967C7-213A-4827-A509-A9DA092618BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5967C7-213A-4827-A509-A9DA092618BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5967C7-213A-4827-A509-A9DA092618BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78EF4B41-BA32-4191-99A0-1075DB62FF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78EF4B41-BA32-4191-99A0-1075DB62FF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78EF4B41-BA32-4191-99A0-1075DB62FF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78EF4B41-BA32-4191-99A0-1075DB62FF23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{218DE586-411A-4AA9-86FD-2D3C856F0D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218DE586-411A-4AA9-86FD-2D3C856F0D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{218DE586-411A-4AA9-86FD-2D3C856F0D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218DE586-411A-4AA9-86FD-2D3C856F0D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0F1DBA-2985-481A-B873-74868F1E5A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0F1DBA-2985-481A-B873-74868F1E5A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0F1DBA-2985-481A-B873-74868F1E5A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0F1DBA-2985-481A-B873-74868F1E5A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A5967C7-213A-4827-A509-A9DA092618BE} = {79BA90B0-07CF-47F7-8335-DCF0940A153A}
+		{78EF4B41-BA32-4191-99A0-1075DB62FF23} = {79BA90B0-07CF-47F7-8335-DCF0940A153A}
+		{DF0F1DBA-2985-481A-B873-74868F1E5A0A} = {79BA90B0-07CF-47F7-8335-DCF0940A153A}
+		{218DE586-411A-4AA9-86FD-2D3C856F0D68} = {79BA90B0-07CF-47F7-8335-DCF0940A153A}
+	EndGlobalSection
+EndGlobal
