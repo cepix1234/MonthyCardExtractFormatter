@@ -4,7 +4,7 @@ namespace MonthlyCardExtractFormatter.Core.test.formatting;
 
 public class FormatterTests
 {
-    private static Formatter? formatter;
+    private static Formatter formatter;
 
     [SetUp]
     public void Setup()

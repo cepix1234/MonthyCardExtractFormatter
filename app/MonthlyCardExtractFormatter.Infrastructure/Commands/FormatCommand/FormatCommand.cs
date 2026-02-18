@@ -19,18 +19,28 @@ public class FormatCommand : Command<FormatCommandSettings>
 
     public override int Execute(CommandContext context, FormatCommandSettings settings)
     {
+        this._consoleLogger.Log(string.Format("Getting files from directory: {0}", settings.Dir));
         string[] files = Directory.GetFiles(settings.Dir);
         foreach (string file in files)
         {
-            this.FormatFile(file);
+            if (new FileInfo(file).Extension == ".md" || new FileInfo(file).Extension == ".txt")
+            {
+                this.FormatFile(file);
+            }
+            else
+            {
+                this._consoleLogger.Log(string.Format("File extension is not correct for file {0}", file));
+            }
         }
         return 0;
     }
 
     private void FormatFile(string filePath)
     {
+        this._consoleLogger.Log(string.Format("Formatting file content {0}", filePath));
         string[] fileLines = File.ReadAllLines(filePath);
         string[] formatedFileLines = this.FormatLines(fileLines);
+        this._consoleLogger.Log(string.Format("Saving formatted content to {0}", filePath));
         File.WriteAllLines(filePath, formatedFileLines);
     }
 
