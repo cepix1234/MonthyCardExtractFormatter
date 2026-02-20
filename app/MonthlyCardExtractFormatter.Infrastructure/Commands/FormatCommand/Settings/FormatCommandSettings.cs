@@ -8,7 +8,7 @@ public class FormatCommandSettings : CommandSettings
 {
     private string _Dir = string.Empty;
 
-    [CommandArgument(0, ",Dir]")]
+    [CommandArgument(0, "<Dir>")]
     [Description("Directory with .txt or .md files to format for excel importing.")]
     [FormatCommandValidationDir]
     public string Dir
