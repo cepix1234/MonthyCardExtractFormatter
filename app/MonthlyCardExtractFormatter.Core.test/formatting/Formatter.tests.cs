@@ -31,9 +31,13 @@ public class FormatterTests
     [Test]
     public void Test_Split_Date_Asstablishment_Correctly_Splits()
     {
-        const string line = "03.12.14 some asstablashemnt SI56 234 234234 432523 -1,42 1.972,06";
+        string line = "03.12.14 some asstablashemnt SI56 234 234234 432523 -1,42 1.972,06";
         string result = formatter.SplitDateAsstablishmentName(line);
         Assert.That(result, Is.EqualTo("03.12.14;some asstablashemnt SI56 234 234234 432523 -1,42 1.972,06"));
+
+        line = "03.12.14 234234 some asstablashemnt SI56 234 234234 432523 -1,42 1.972,06";
+        result = formatter.SplitDateAsstablishmentName(line);
+        Assert.That(result, Is.EqualTo("03.12.14;234234 some asstablashemnt SI56 234 234234 432523 -1,42 1.972,06"));
     }
 
     [Test]
@@ -63,9 +67,13 @@ public class FormatterTests
     [Test]
     public void Test_Split_Status_Cost_Correctly_Splits()
     {
-        const string line = "03.12.14;some asstablashemnt SI56 234 234234 432523;-1,42 1.972,06";
+        string line = "03.12.14;some asstablashemnt SI56 234 234234 432523;-1,42 1.972,06";
         string result = formatter.SplitStatusCost(line);
         Assert.That(result, Is.EqualTo("03.12.14;some asstablashemnt SI56 234 234234 432523;-1,42;1.972,06"));
+
+        line = "03.12.14;some asstablashemnt SI56 234 234234 432523;-1,42 972,06";
+        result = formatter.SplitStatusCost(line);
+        Assert.That(result, Is.EqualTo("03.12.14;some asstablashemnt SI56 234 234234 432523;-1,42;972,06"));
     }
 
     [Test]

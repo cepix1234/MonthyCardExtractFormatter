@@ -1,7 +1,6 @@
 ﻿using MonthlyCardExtractFormatter.Core.Logging.Models;
 using Spectre.Console.Cli;
 using MonthlyCardExtractFormatter.Infrastructure.Commands.FormatCommand.Settings;
-using MonthlyCardExtractFormatter.Core.Formatting;
 using MonthlyCardExtractFormatter.Core.Formatting.Models;
 
 namespace MonthlyCardExtractFormatter.Infrastructure.Commands.FormatCommand;
@@ -11,10 +10,10 @@ public class FormatCommand : Command<FormatCommandSettings>
     private readonly IConsoleLogger _consoleLogger;
     private readonly IFormatter _formatter;
 
-    public FormatCommand(IConsoleLogger consoleLogger)
+    public FormatCommand(IConsoleLogger consoleLogger, IFormatter formatter)
     {
         _consoleLogger = consoleLogger;
-        _formatter = new Formatter();
+        _formatter = formatter;
     }
 
     public override int Execute(CommandContext context, FormatCommandSettings settings)

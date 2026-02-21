@@ -7,14 +7,14 @@ public class Formatter : IFormatter
 {
     private readonly Regex _isDataLineRegex = new Regex(@"^\d\d\.\d\d\.\d\d ");
 
-    private readonly Regex _splitDateNameRegex = new Regex(@"^(\d\d\.\d\d\.\d\d) (\D)");
+    private readonly Regex _splitDateNameRegex = new Regex(@"^(\d\d\.\d\d\.\d\d) (.)");
     private readonly string _splitDateNameReplacement = "$1;$2";
 
     private readonly Regex _splitNameCostRegex = new Regex(@" ([+-]\d)");
     private readonly string _splitNameCostReplacement = ";$1";
 
-    private readonly Regex _splitStatusCostRegex = new Regex(@" (\d\.)");
-    private readonly string _splitStatusCostReplacement = ";$1";
+    private readonly Regex _splitStatusCostRegex = new Regex(@" (\d\.)?(\d{1,3}),(\d{1,2})");
+    private readonly string _splitStatusCostReplacement = ";$1$2,$3";
 
     private readonly Regex _fixPositiveCostRegex = new Regex(@";\+(\d)");
     private readonly string _fixPositiveCostReplacement = ";$1";
